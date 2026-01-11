@@ -662,6 +662,8 @@ h6 {
   display: flex;
   gap: var(--space-md);
   justify-content: center;
+  margin-top: var(--space-3xl);
+  width: 100%;
   flex-wrap: wrap;
 }
 
