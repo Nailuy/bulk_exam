@@ -119,7 +119,7 @@ h6 {
 /* --- Phase Containers --- */
 .phase {
   width: 100%;
-  max-width: 600px;
+  max-width: 900px;
   animation: fadeIn 0.4s ease;
 }
 
@@ -162,7 +162,7 @@ h6 {
 }
 
 .landing-logo {
-  width: 120px;
+  width: 180px;
   height: auto;
   margin-bottom: var(--space-xl);
   filter: invert(1) brightness(1.1);
@@ -471,7 +471,10 @@ h6 {
 
 /* --- Identity Card --- */
 .identity-card-wrapper {
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-3xl);
+  margin-top: var(--space-lg);
+  transform: scale(1.25);
+  transform-origin: center top;
 }
 
 .identity-card {
@@ -701,11 +704,11 @@ h6 {
 /* --- Hero Container for Mascot --- */
 .hero-mascot {
   position: fixed;
-  bottom: -20px;
-  right: 20px;
-  width: 200px;
+  bottom: -40px;
+  right: -20px;
+  width: 600px;
   height: auto;
-  opacity: 0.4;
+  opacity: 0.8;
   pointer-events: none;
   z-index: 0;
 }
