@@ -58,12 +58,12 @@ export default function LandingPhase({ onStart }) {
     const isValid = nickname.trim().length > 0;
 
     const floatingMascots = [
-        { src: "/img/1-lfg.png", style: { top: '10%', left: '5%', animationDelay: '0s' } },
-        { src: "/img/2-downbad.png", style: { top: '30%', right: '5%', animationDelay: '1s' } },
-        { src: "/img/3-salute.png", style: { bottom: '20%', left: '8%', animationDelay: '2s' } },
-        { src: "/img/4-uwu.png", style: { top: '15%', right: '15%', animationDelay: '0.5s' } },
-        { src: "/img/7-pray.png", style: { bottom: '10%', right: '25%', animationDelay: '1.5s' } },
-        { src: "/img/8-fighter.png", style: { top: '50%', left: '-2%', animationDelay: '2.5s' } },
+        { src: "/img/1-lfg.png", style: { top: '10%', left: '10%', animationDelay: '0s' } },
+        { src: "/img/2-downbad.png", style: { top: '30%', right: '10%', animationDelay: '1s' } },
+        { src: "/img/3-salute.png", style: { bottom: '15%', left: '10%', animationDelay: '2s' } },
+        { src: "/img/4-uwu.png", style: { top: '15%', right: '25%', animationDelay: '0.5s' } },
+        { src: "/img/7-pray.png", style: { bottom: '10%', right: '35%', animationDelay: '1.5s' } },
+        { src: "/img/8-fighter.png", style: { top: '55%', left: '8%', animationDelay: '2.5s' } },
         { src: "/img/9-heart.png", style: { top: '5%', left: '50%', transform: 'translateX(-50%)', animationDelay: '3s' } }
     ];
 
