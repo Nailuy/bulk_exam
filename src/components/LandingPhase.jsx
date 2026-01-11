@@ -61,7 +61,7 @@ export default function LandingPhase({ onStart }) {
         <div className="phase landing-phase">
             <div className="card">
                 <img
-                    src="./img/BULK-Logomark-Dark.svg"
+                    src="/img/BULK-Logomark-Dark.svg"
                     alt="Bulktrade"
                     className="landing-logo"
                     style={{ filter: 'invert(1)' }}
@@ -131,7 +131,7 @@ export default function LandingPhase({ onStart }) {
 
             {/* Hero mascot placeholder */}
             <img
-                src="./img/10-gBULK.png"
+                src="/img/10-gBULK.png"
                 alt=""
                 className="hero-mascot"
             />

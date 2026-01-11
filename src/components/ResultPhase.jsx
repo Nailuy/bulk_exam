@@ -38,7 +38,7 @@ export default function ResultPhase({ nickname, avatar, score }) {
                 <div className="identity-card" ref={cardRef}>
                     {/* Background Image */}
                     <img
-                        src="./img/Card_Viking Era.png"
+                        src="/img/Card_Viking Era.png"
                         alt=""
                         className="card-bg"
                     />
@@ -80,7 +80,7 @@ export default function ResultPhase({ nickname, avatar, score }) {
                         {/* Bottom Section - Mascot */}
                         <div className="card-bottom">
                             <img
-                                src={`./img/${role.mascot}`}
+                                src={`/img/${role.mascot}`}
                                 alt=""
                                 className="card-mascot"
                             />
@@ -91,7 +91,7 @@ export default function ResultPhase({ nickname, avatar, score }) {
 
             <div className="download-actions">
                 <button className="btn btn-primary" onClick={handleDownload}>
-                    📥 Download Card
+                    Download Card
                 </button>
                 <button
                     className="btn btn-secondary"
