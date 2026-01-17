@@ -1,15 +1,34 @@
 import { useState, useEffect } from 'react';
-import { questions } from '../data/questions';
+import { questions as allQuestions } from '../data/questions';
+
+// Shuffling utility
+const shuffleArray = (array) => {
+    let shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+};
 
 export default function QuizPhase({ onComplete }) {
+    const [randomQuestions, setRandomQuestions] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [score, setScore] = useState(0);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [isAnswered, setIsAnswered] = useState(false);
     const [isTransitioning, setIsTransitioning] = useState(false);
 
-    const currentQuestion = questions[currentIndex];
-    const progress = ((currentIndex) / questions.length) * 100;
+    // Initialize/Shuffle questions
+    useEffect(() => {
+        const shuffled = shuffleArray(allQuestions);
+        setRandomQuestions(shuffled.slice(0, 20));
+    }, []);
+
+    const currentQuestion = randomQuestions[currentIndex];
+    const progress = ((currentIndex) / 20) * 100;
+
+    if (!currentQuestion) return <div>Loading...</div>;
 
     const handleAnswer = (answerIndex) => {
         if (isAnswered) return;
@@ -23,8 +42,9 @@ export default function QuizPhase({ onComplete }) {
         }
 
         // Auto-advance after feedback
+        // Auto-advance after feedback
         setTimeout(() => {
-            if (currentIndex < questions.length - 1) {
+            if (currentIndex < 19) { // 20 questions total (0-19)
                 setIsTransitioning(true);
                 setTimeout(() => {
                     setCurrentIndex(prev => prev + 1);
@@ -57,7 +77,7 @@ export default function QuizPhase({ onComplete }) {
 
             <div className="card" style={{ opacity: isTransitioning ? 0 : 1, transition: 'opacity 0.2s' }}>
                 <div className="question-counter">
-                    Question {currentIndex + 1} of {questions.length}
+                    Question {currentIndex + 1} of 20
                 </div>
 
                 <h2 className="question-text">{currentQuestion.question}</h2>
